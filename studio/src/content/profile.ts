@@ -1,0 +1,1 @@
+export const profile={name:'Young',handle:'BettTer',github:'https://github.com/BettTer',headline:'Software, sound & things worth keeping.',bio:'I build software and collect small experiments in sound, interaction and the places between. This room is a way of keeping them together.'};

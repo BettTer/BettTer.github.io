@@ -1,0 +1,10 @@
+import {cp,mkdir,readFile,writeFile} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const studio=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),repo=path.resolve(studio,'..'),out=path.join(studio,'dist');
+for(const name of ['blog','assets','stylesheets','javascripts','images','atom.xml','sitemap.xml','robots.txt','favicon.png'])await cp(path.join(repo,name),path.join(out,name),{recursive:true});
+await mkdir(path.join(out,'legacy'),{recursive:true});
+const old=await readFile(path.join(repo,'index.html'),'utf8');
+await writeFile(path.join(out,'legacy/index.html'),old.replace('<head>','<head><base href="/">'));
+await writeFile(path.join(out,'.nojekyll'),'');
+console.log('Packaged new homepage, original journal URLs, feed and legacy assets.');

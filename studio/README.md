@@ -25,6 +25,7 @@ npm run preview -- --port 4173
 
 - `src/content/profile.ts`: display name and public links.
 - `src/content/projects.ts`: CD order, titles, descriptions, repository/live URLs and colours. Keep ownership and prototype status accurate. These descriptions were checked against the public repository READMEs on 2026-11-08.
+- The first three discs are shipped products: Ancher, PlanFlow Meter and AI Emoji Converter. Their links, responsibilities and the first-screen introduction come from [the profile README](https://github.com/BettTer/BettTer/blob/main/README.md), read on 2026-11-08. Keep the seven localized descriptions/categories in `src/i18n/messages.ts` aligned with disc order. Production discs link to websites/stores; source-code links belong only to public repositories.
 - Existing `../blog/**/index.html` articles are imported by `scripts/import-notes.mjs`; never edit `notes.generated.json` by hand.
 - Add a Markdown file under `content/notes/` with `title:` and `date:` in a `---` frontmatter block. Keep images in `public/studio-art/` and reference them by absolute path.
 - No audio is bundled. Project selection works independently of any soundtrack. A soundtrack can be added later from a user-provided source.
@@ -32,6 +33,8 @@ npm run preview -- --port 4173
 ## Behaviour
 
 Native scrolling works throughout. CSS scroll-timeline progressively moves the room where supported. Touch devices have a vertical composition; reduced-motion disables visual movement. The CD selector uses transition tokens to reject stale completions. Notes open in a native modal dialog, with Escape, focus restoration and background scroll lock.
+
+The scene also has independent cloud drift, water ripples, solar light and reflection animations in `src/living-studio.css`. These respect reduced motion, pause when the scene is outside the viewport or the document is hidden, and use no video or animation dependency. The About link points to the introduction in the first screen; the later section describes the working process.
 
 Default cursor and clickable cursor are original pixel SVGs; text controls keep the I-beam. They apply only to fine pointers.
 

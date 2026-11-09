@@ -4,7 +4,8 @@
  --scene-haze-core:#ffe8be;--scene-haze-edge:#ffb1c7;--scene-sea-1:#8c80b3;--scene-sea-2:#66688e;--scene-sea-3:#354f70;
  --scene-room-1:#f2eddb;--scene-room-2:#d5ceba;--scene-wood-1:#bf7957;--scene-wood-2:#8f4e3e;
  --scene-cloud:#eec1e0;--scene-wave:#f3cedd;--scene-orb:#fff0c9;--scene-city:#5b577b;--scene-palm:#263f47;
- --scene-reflection:#ffe1c9;--scene-window-light:#ffd2b8;--scene-window-opacity:.65;--scene-stars:0;--scene-orb-x:800px;--scene-orb-y:285px;
+ /* Dusk continues east-to-west: morning x=830, midday x=1050, sunset x=1400. */
+ --scene-reflection:#ffe1c9;--scene-window-light:#ffd2b8;--scene-window-opacity:.65;--scene-stars:0;--scene-orb-x:1400px;--scene-orb-y:335px;
 }
 .studio-scene[data-period=morning]{
  --scene-sky-1:#8eafca;--scene-sky-2:#c2c4db;--scene-sky-3:#f1c4c8;--scene-sky-4:#ffe0b8;

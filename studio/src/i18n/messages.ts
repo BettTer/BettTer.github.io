@@ -1,5 +1,6 @@
 import type {Locale} from './locale';
 const en={
+ paperCollection:'Journal newspapers',browsePapers:'SLIDE THROUGH THE PAPERS · PICK ONE TO READ',previousPaper:'Previous newspaper',nextPaper:'Next newspaper',
  pageTitle:'Young — A room by the sea',studio:'’s studio',skip:'Skip to projects',navigation:'Main navigation',collection:'The collection',journal:'Journal',music:'Music',about:'About',language:'Language',
  heroEyebrow:'AN OPEN WINDOW. A PERSONAL COLLECTION.',heroFirst:'A room',heroSecond:'by the',heroAccent:'sea.',heroDescription:'Software, sound &\nthings worth keeping.',comeIn:'Come on in',listeningDesk:'THE LISTENING DESK',inPlayer:'IN THE PLAYER',pace:'EXPLORE AT YOUR OWN PACE.',scrollDesk:'SCROLL TO THE DESK',roomBy:'A ROOM BY YOUNG / BETTTER',
  ready:'DISC READY',changing:'CHANGING DISC',readingDisc:'READING DISC',track:'TRACK',previous:'Previous project',next:'Next project',loadedDisc:'Loaded disc',
@@ -16,6 +17,7 @@ const en={
 };
 export type Messages=typeof en;
 const zhHans:Messages={
+ paperCollection:'杂谈报纸收藏',browsePapers:'左右翻阅，挑一份展开读读。',previousPaper:'上一份报纸',nextPaper:'下一份报纸',
  pageTitle:'Young — 海边的工作室',studio:' 的工作室',skip:'跳到项目',navigation:'主导航',collection:'项目收藏',journal:'杂谈',music:'音乐',about:'关于',language:'语言',
  heroEyebrow:'一扇敞开的窗，一份私人的收藏。',heroFirst:'一间工作室，',heroSecond:'面朝',heroAccent:'大海。',heroDescription:'软件、声音，\n还有值得留下的事物。',comeIn:'进来坐坐',listeningDesk:'此刻的聆听角落',inPlayer:'碟机里的项目',pace:'按自己的节奏，慢慢探索。',scrollDesk:'走近桌面',roomBy:'YOUNG / BETTTER 的小房间',
  ready:'碟片就绪',changing:'正在换碟',readingDisc:'正在读碟',track:'曲目',previous:'上一个项目',next:'下一个项目',loadedDisc:'已装入的碟片',
@@ -31,6 +33,7 @@ const zhHans:Messages={
  ],projectKinds:['工具 / 游戏系统','音乐 / 交互','音频 / 工程','空间 / 原型']
 };
 const zhHant:Messages={
+ paperCollection:'雜談報紙收藏',browsePapers:'左右翻閱，挑一份展開讀讀。',previousPaper:'上一份報紙',nextPaper:'下一份報紙',
  pageTitle:'Young — 海邊的工作室',studio:' 的工作室',skip:'跳到專案',navigation:'主導覽',collection:'專案收藏',journal:'雜談',music:'音樂',about:'關於',language:'語言',
  heroEyebrow:'一扇敞開的窗，一份私人的收藏。',heroFirst:'一間工作室，',heroSecond:'面朝',heroAccent:'大海。',heroDescription:'軟體、聲音，\n還有值得留下的事物。',comeIn:'進來坐坐',listeningDesk:'此刻的聆聽角落',inPlayer:'碟機裡的專案',pace:'按自己的節奏，慢慢探索。',scrollDesk:'走近桌面',roomBy:'YOUNG / BETTTER 的小房間',
  ready:'碟片就緒',changing:'正在換碟',readingDisc:'正在讀碟',track:'曲目',previous:'上一個專案',next:'下一個專案',loadedDisc:'已載入的碟片',
@@ -46,6 +49,7 @@ const zhHant:Messages={
  ],projectKinds:['工具 / 遊戲系統','音樂 / 互動','音訊 / 工程','空間 / 原型']
 };
 const ja:Messages={
+ paperCollection:'雑談の新聞コレクション',browsePapers:'左右にめくって、気になる一枚を。',previousPaper:'前の新聞',nextPaper:'次の新聞',
  pageTitle:'Young — 海辺のアトリエ',studio:' のアトリエ',skip:'プロジェクトへ',navigation:'メインナビゲーション',collection:'コレクション',journal:'雑談',music:'音楽',about:'自己紹介',language:'言語',
  heroEyebrow:'開いた窓と、ささやかなコレクション。',heroFirst:'海辺の',heroSecond:'',heroAccent:'アトリエ。',heroDescription:'ソフトウェア、音、\nそして残しておきたいもの。',comeIn:'どうぞ、中へ',listeningDesk:'リスニングデスク',inPlayer:'プレーヤーの中には',pace:'自分のペースで、ゆっくりと。',scrollDesk:'デスクへ',roomBy:'YOUNG / BETTTER の小さな部屋',
  ready:'ディスク準備完了',changing:'ディスク交換中',readingDisc:'ディスク読込中',track:'曲目',previous:'前のプロジェクト',next:'次のプロジェクト',loadedDisc:'セット中のディスク',

@@ -1,5 +1,6 @@
 import type {Locale} from './locale';
 const en={
+ sceneLabel:'SCENE',sceneTimeLabel:'Choose the time of day',sceneAuto:'Local time',sceneMorning:'Morning',sceneDay:'Daylight',sceneDusk:'Dusk',sceneNight:'Night',
  heroCurrent:"At Ancher: mobile apps & AI agents",shippedProducts:"SHIPPED PRODUCTS",openSourceWork:"OPEN SOURCE & EXPLORATIONS",workCategories:"Browse work by category",productWebsite:"Visit the website",
  paperCollection:'Journal newspapers',browsePapers:'SLIDE THROUGH THE PAPERS · PICK ONE TO READ',previousPaper:'Previous newspaper',nextPaper:'Next newspaper',
  pageTitle:'Young — A room by the sea',studio:'’s studio',skip:'Skip to projects',navigation:'Main navigation',collection:'The collection',journal:'Journal',music:'Music',about:'About',language:'Language',
@@ -21,6 +22,7 @@ const en={
 };
 export type Messages=typeof en;
 const zhHans:Messages={
+ sceneLabel:'天色',sceneTimeLabel:'选择场景时段',sceneAuto:'当地时间',sceneMorning:'清晨',sceneDay:'白天',sceneDusk:'黄昏',sceneNight:'夜晚',
  heroCurrent:"在 Ancher，做移动端与 AI Agent",shippedProducts:"已上线的产品",openSourceWork:"开源与探索",workCategories:"按类别浏览作品",productWebsite:"访问产品网站",
  paperCollection:'杂谈报纸收藏',browsePapers:'左右翻阅，挑一份展开读读。',previousPaper:'上一份报纸',nextPaper:'下一份报纸',
  pageTitle:'Young — 海边的工作室',studio:' 的工作室',skip:'跳到项目',navigation:'主导航',collection:'项目收藏',journal:'杂谈',music:'音乐',about:'关于',language:'语言',
@@ -41,6 +43,7 @@ const zhHans:Messages={
  ],projectKinds:["已上线 / 移动端与 AI","已上线 / 小组件与同步","已上线 / 端侧机器学习",'工具 / 游戏系统','音乐 / 交互','音频 / 工程','空间 / 原型']
 };
 const zhHant:Messages={
+ sceneLabel:'天色',sceneTimeLabel:'選擇場景時段',sceneAuto:'當地時間',sceneMorning:'清晨',sceneDay:'白天',sceneDusk:'黃昏',sceneNight:'夜晚',
  heroCurrent:"在 Ancher，做行動端與 AI Agent",shippedProducts:"已上線的產品",openSourceWork:"開源與探索",workCategories:"依類別瀏覽作品",productWebsite:"造訪產品網站",
  paperCollection:'雜談報紙收藏',browsePapers:'左右翻閱，挑一份展開讀讀。',previousPaper:'上一份報紙',nextPaper:'下一份報紙',
  pageTitle:'Young — 海邊的工作室',studio:' 的工作室',skip:'跳到專案',navigation:'主導覽',collection:'專案收藏',journal:'雜談',music:'音樂',about:'關於',language:'語言',
@@ -61,6 +64,7 @@ const zhHant:Messages={
  ],projectKinds:["已上線 / 行動端與 AI","已上線 / 小工具與同步","已上線 / 端側機器學習",'工具 / 遊戲系統','音樂 / 互動','音訊 / 工程','空間 / 原型']
 };
 const ja:Messages={
+ sceneLabel:'空の色',sceneTimeLabel:'時間帯を選ぶ',sceneAuto:'現地時刻',sceneMorning:'朝',sceneDay:'昼',sceneDusk:'夕暮れ',sceneNight:'夜',
  heroCurrent:"Ancher でモバイルと AI エージェントを開発",shippedProducts:"リリースした製品",openSourceWork:"オープンソースと実験",workCategories:"作品のカテゴリー",productWebsite:"製品サイトを見る",
  paperCollection:'雑談の新聞コレクション',browsePapers:'左右にめくって、気になる一枚を。',previousPaper:'前の新聞',nextPaper:'次の新聞',
  pageTitle:'Young — 海辺のアトリエ',studio:' のアトリエ',skip:'プロジェクトへ',navigation:'メインナビゲーション',collection:'コレクション',journal:'雑談',music:'音楽',about:'自己紹介',language:'言語',

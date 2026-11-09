@@ -36,6 +36,8 @@ Native scrolling works throughout. CSS scroll-timeline progressively moves the r
 
 The scene also has independent cloud drift, water ripples, solar light and reflection animations in `src/living-studio.css`. These respect reduced motion, pause when the scene is outside the viewport or the document is hidden, and use no video or animation dependency. The About link points to the introduction in the first screen; the later section describes the working process.
 
+`src/scene-day-cycle.css` adds stronger wind/water, individually rooted palm fronds and four lighting palettes. Automatic lighting follows browser-local hours: morning 05:00–09:59, day 10:00–15:59, dusk 16:00–19:59, night 20:00–04:59. These are stylized clock bands, not astronomical sunrise times. The clock refreshes every minute and on returning to a visible tab. The footer selector previews each period; choosing Local time immediately restores Auto. Manual previews are not saved across reloads, and no location or external time service is used.
+
 Default cursor and clickable cursor are original pixel SVGs; text controls keep the I-beam. They apply only to fine pointers.
 
 ## Legacy and release

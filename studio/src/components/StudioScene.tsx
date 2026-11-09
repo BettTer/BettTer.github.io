@@ -1,8 +1,20 @@
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useRef,useState,type CSSProperties} from 'react';
+import {useCelestialTransition} from '../scene/useCelestialTransition';
+import {celestialDurations} from '../scene/celestialState';
+import {orbitCssPoint} from '../scene/orbitGeometry';
+import {orbitKeyframes} from '../scene/orbitAnimation';
 import type {ScenePeriod} from '../scene/timeOfDay';
-export function StudioScene({period}:{period:ScenePeriod}){
+export function StudioScene({period,reduced=false}:{period:ScenePeriod;reduced?:boolean}){
  const scene=useRef<HTMLDivElement>(null);
  const [running,setRunning]=useState(true);
+ const orbit=useCelestialTransition(period,reduced||!running);
+ const restingPose=orbitCssPoint(orbit.to);
+ const motionStyle={
+  '--orbit-body-pose':restingPose.body,'--orbit-light-pose':restingPose.reflection,
+  '--orbit-path-name':orbit.phase==='idle'?'none':`celestial-path-${orbit.token}`,
+  '--orbit-light-name':orbit.phase==='idle'?'none':`celestial-light-${orbit.token}`,
+  '--orbit-duration':`${orbit.phase==='idle'?0:celestialDurations[orbit.phase]}ms`
+ } as CSSProperties;
  useEffect(()=>{
   let inView=true;
   const update=()=>setRunning(inView&&!document.hidden);
@@ -12,7 +24,7 @@ export function StudioScene({period}:{period:ScenePeriod}){
   update();
   return()=>{observer.disconnect();document.removeEventListener('visibilitychange',update);};
  },[]);
- return <div ref={scene} className={`studio-scene ${running?'scene-running':'scene-paused'}`} data-period={period} aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+ return <div ref={scene} className={`studio-scene ${running?'scene-running':'scene-paused'}`} data-period={orbit.shown} data-orbit-phase={orbit.phase} data-requested-period={period} style={motionStyle} aria-hidden="true"><style>{orbitKeyframes(orbit)}</style><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 <defs>
  <linearGradient id="sky" x2="0" y2="1"><stop stopColor="var(--scene-sky-1)"/><stop offset=".34" stopColor="var(--scene-sky-2)"/><stop offset=".67" stopColor="var(--scene-sky-3)"/><stop offset="1" stopColor="var(--scene-sky-4)"/></linearGradient>
  <radialGradient id="sun-haze"><stop stopColor="var(--scene-haze-core)" stopOpacity=".62"/><stop offset=".55" stopColor="var(--scene-haze-edge)" stopOpacity=".2"/><stop offset="1" stopColor="var(--scene-haze-edge)" stopOpacity="0"/></radialGradient>
@@ -69,7 +81,7 @@ export function StudioScene({period}:{period:ScenePeriod}){
 <path className="scene-room-light" d="M978 672L1190 735h351l-250-63Z" fill="#f8d59a" opacity=".5"/>
 <path className="scene-room-light scene-room-light-soft" d="M450 672L301 735h162l122-63Z" fill="#f7cd91" opacity=".42"/>
 <path d="M740 764L1075 1000h325L993 764Z" fill="#f1be87" opacity=".18"/>
-<g transform="translate(1330 456)"><rect x="0" y="0" width="151" height="279" rx="4" fill="#453c34"/><rect x="8" y="9" width="135" height="259" fill="url(#grill)"/><circle cx="75" cy="70" r="27" fill="#252f30"/><circle cx="75" cy="70" r="16" fill="#1e292b"/><circle cx="75" cy="178" r="55" fill="#202c2e"/><circle cx="75" cy="178" r="44" fill="#2d3939"/><circle cx="75" cy="178" r="22" fill="#182629"/><rect x="57" y="249" width="36" height="4" fill="#aea18a"/></g>
+<g className="scene-speaker" transform="translate(1450 456)"><rect x="0" y="0" width="151" height="279" rx="4" fill="#453c34"/><rect x="8" y="9" width="135" height="259" fill="url(#grill)"/><circle cx="75" cy="70" r="27" fill="#252f30"/><circle cx="75" cy="70" r="16" fill="#1e292b"/><circle cx="75" cy="178" r="55" fill="#202c2e"/><circle cx="75" cy="178" r="44" fill="#2d3939"/><circle cx="75" cy="178" r="22" fill="#182629"/><rect x="57" y="249" width="36" height="4" fill="#aea18a"/></g>
 <g transform="translate(299 570)"><path d="M10 160h120l-19-9H28Z" fill="#d7c6a4"/><path d="M27 151l46-120 7 2-45 118Z" fill="#b9b7a3"/><path d="M57 29l55-20 36 68-101 0Z" fill="#254a50"/><path d="M47 77h101" stroke="#1f3c43" strokeWidth="5"/><path d="M50 80L6 166h210L145 80Z" fill="#ffe3ab" opacity=".12"/></g>
 <path d="M0 944H1600" stroke="#6c4238" opacity=".45"/>
 </svg><span className="scene-grain"/></div>}

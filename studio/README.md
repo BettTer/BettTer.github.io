@@ -60,3 +60,9 @@ The deploy workflow is manual so content pushes do not unexpectedly replace the 
 English, Simplified Chinese, Traditional Chinese and Japanese are available in the header. The first visit follows the browser language, and an explicit choice is saved under `studio-language` in localStorage. Translation strings and project descriptions live in `src/i18n/messages.ts`. Project names and printed cover branding retain their original names; imported articles retain the original text, with a language label in the reader.
 
 The Music section links to the user-provided Young CRT Spotify artist page. `public/studio-art/young-crt-header.png` is the header artwork supplied by the user. Update the artist URL/name in `src/content/profile.ts`. No Spotify SDK, embedded player, account login, or autoplay is required.
+
+## Celestial motion
+
+`scene/celestialState.ts` keeps the requested period separate from the displayed body. Forward morning/day/dusk changes follow one elliptical path. Backward requests (including dusk to morning) and sun/moon changes finish the current setting before starting the next rise. Requests during a phase are queued; the latest wins at the next safe boundary. `orbitGeometry.ts` and `orbitAnimation.ts` generate body and reflection movement from the same sampled ellipse. Shared phase durations drive both the reducer timer and CSS. Offscreen/reduced-motion updates settle immediately, with no residual transform transition.
+
+The player and speaker leave the western window visible on desktop; compact layouts stack the player and reframe the window to keep the sunset in view.

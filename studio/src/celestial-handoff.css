@@ -1,0 +1,36 @@
+/* Reserve a real western window view, rather than compositing light over the player. */
+@media(min-width:1051px){
+ .hero .hero-player{right:20%;width:37%;max-width:560px;bottom:12%}
+ .hero .hero-intro,html:not(:lang(en)) .hero .hero-intro{width:39%}
+}
+@media(min-width:1051px) and (max-width:1199px){
+ .hero-biography,.hero-products{max-width:340px}
+}
+/* Compact screens keep the player below the introduction and expose the western window. */
+@media(max-width:1050px){
+ .hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-bottom:100px}
+ .hero .hero-intro,html:not(:lang(en)) .hero .hero-intro{width:100%;max-width:550px;padding-top:32px}
+ .hero .hero-player{position:relative;right:auto;bottom:auto;width:88%;max-width:430px;margin:44px 0 8px;flex-shrink:0}
+ .room-backdrop .studio-scene svg{width:160svh;min-width:1360px;max-width:none;animation:none;transform:translate(calc(100vw - 94.375%),-70px)}
+ .hero-bottom{justify-content:space-between;gap:16px}
+ .hero-bottom>span{display:none}
+ .hero-biography{max-width:440px}
+}
+@media(min-width:701px) and (max-width:1050px){
+ .hero .hero-intro{max-width:500px}.hero .hero-player{width:410px;margin-left:3%}
+ .hero{padding-bottom:100px}.hero .hero-intro>h1,html:not(:lang(en)) .hero .hero-intro>h1{font-size:104px}
+ .room-backdrop .studio-scene svg{min-width:992px;transform:translateX(calc(100vw - 94.375%))}
+}
+@media(max-width:700px){.hero .hero-player{width:87%;max-width:360px;margin-top:40px;margin-left:0}}
+/* One ellipse, sampled into keyframes: no reverse travel or diagonal icon swap. */
+.studio-scene{--orbit-center-x:1080px;--orbit-radius-x:300px;--orbit-ground-y:510px;--orbit-radius-y:360px}
+@media(max-width:1050px){.studio-scene{--orbit-center-x:1200px;--orbit-radius-x:150px}}
+.hero .player-caption{width:max-content;max-width:100%;min-width:220px;gap:30px}
+.scene-celestial{transform:var(--orbit-body-pose);transition:none;animation:var(--orbit-path-name) var(--orbit-duration) linear both}
+.scene-reflection{transform:var(--orbit-light-pose);transition:none;animation:var(--orbit-light-name) var(--orbit-duration) linear both}
+.scene-paused .scene-celestial,.scene-paused .scene-reflection{animation:none;transition:none}
+@media(prefers-reduced-motion:reduce){
+ .studio-scene .scene-celestial,.studio-scene .scene-reflection{animation:none!important;transition:none!important}
+ @media(max-width:700px){.room-backdrop .studio-scene svg{transform:translate(calc(100vw - 94.375%),-70px)}}
+ @media(min-width:701px) and (max-width:1050px){.room-backdrop .studio-scene svg{transform:translateX(calc(100vw - 94.375%))}}
+}

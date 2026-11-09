@@ -4,33 +4,30 @@
  --scene-haze-core:#ffe8be;--scene-haze-edge:#ffb1c7;--scene-sea-1:#8c80b3;--scene-sea-2:#66688e;--scene-sea-3:#354f70;
  --scene-room-1:#f2eddb;--scene-room-2:#d5ceba;--scene-wood-1:#bf7957;--scene-wood-2:#8f4e3e;
  --scene-cloud:#eec1e0;--scene-wave:#f3cedd;--scene-orb:#fff0c9;--scene-city:#5b577b;--scene-palm:#263f47;
- /* Dusk continues east-to-west: morning x=830, midday x=1050, sunset x=1400. */
- --scene-reflection:#ffe1c9;--scene-window-light:#ffd2b8;--scene-window-opacity:.65;--scene-stars:0;--scene-orb-x:1400px;--scene-orb-y:335px;
+ --scene-reflection:#ffe1c9;--scene-window-light:#ffd2b8;--scene-window-opacity:.65;--scene-stars:0;
 }
 .studio-scene[data-period=morning]{
  --scene-sky-1:#8eafca;--scene-sky-2:#c2c4db;--scene-sky-3:#f1c4c8;--scene-sky-4:#ffe0b8;
  --scene-haze-core:#fff2cf;--scene-haze-edge:#ffd1c4;--scene-sea-1:#a7bbcc;--scene-sea-2:#7d9fb5;--scene-sea-3:#4b7f98;
  --scene-room-1:#f5eedc;--scene-room-2:#ded7c1;--scene-wood-1:#c99369;--scene-wood-2:#9f6850;
  --scene-cloud:#fff0df;--scene-wave:#eff1e0;--scene-orb:#fff4d1;--scene-city:#7e8caa;--scene-palm:#385d63;
- --scene-reflection:#fff1c9;--scene-window-opacity:.2;--scene-orb-x:830px;--scene-orb-y:210px;
+ --scene-reflection:#fff1c9;--scene-window-opacity:.2;
 }
 .studio-scene[data-period=day]{
  --scene-sky-1:#5e9fc8;--scene-sky-2:#91c6de;--scene-sky-3:#bde2e7;--scene-sky-4:#e1eee0;
  --scene-haze-core:#fffada;--scene-haze-edge:#d9f2ed;--scene-sea-1:#70c2cb;--scene-sea-2:#4599b1;--scene-sea-3:#326a8d;
  --scene-room-1:#f4f0dc;--scene-room-2:#d5d8c3;--scene-wood-1:#bd9168;--scene-wood-2:#93694d;
  --scene-cloud:#f3f7e9;--scene-wave:#d7f5ee;--scene-orb:#fffbe1;--scene-city:#65859d;--scene-palm:#2d5960;
- --scene-reflection:#f3ffe1;--scene-window-opacity:.1;--scene-orb-x:1050px;--scene-orb-y:165px;
+ --scene-reflection:#f3ffe1;--scene-window-opacity:.1;
 }
 .studio-scene[data-period=night]{
  --scene-sky-1:#131d3c;--scene-sky-2:#30345f;--scene-sky-3:#60557f;--scene-sky-4:#a67e9a;
  --scene-haze-core:#c7d5f0;--scene-haze-edge:#767da8;--scene-sea-1:#595b83;--scene-sea-2:#353e67;--scene-sea-3:#23324f;
  --scene-room-1:#e7dccb;--scene-room-2:#b5acb0;--scene-wood-1:#956d6c;--scene-wood-2:#594653;
  --scene-cloud:#a9a6c6;--scene-wave:#b8c2e0;--scene-orb:#f3e9cb;--scene-city:#333c5d;--scene-palm:#1e3445;
- --scene-reflection:#d4d8ef;--scene-window-light:#ffd8a0;--scene-window-opacity:1;--scene-stars:1;--scene-orb-x:820px;--scene-orb-y:200px;
+ --scene-reflection:#d4d8ef;--scene-window-light:#ffd8a0;--scene-window-opacity:1;--scene-stars:1;
 }
 .studio-scene stop{transition:stop-color 1.8s ease}
-.scene-celestial{transform:translate(var(--scene-orb-x),var(--scene-orb-y));transition:transform 1.8s ease}
-.scene-reflection{transform:translateX(calc(var(--scene-orb-x) - 1177px));transition:transform 1.8s ease}
 .scene-moon{display:none}
 [data-period=night] .scene-sun{display:none}
 [data-period=night] .scene-moon{display:block}

@@ -49,3 +49,9 @@ After user review:
 4. Verify the homepage, a direct old article URL, `/blog/archives/` and the project subsite `/master-duel-ai-advisor/`.
 
 The deploy workflow is manual so content pushes do not unexpectedly replace the live site. For rollback to the original site, set Pages source back to master/root: original root files have been retained. The pre-change commit is `e7f0ed4b6d4457fb566c4d2e88f49c10d9c0e0c4`.
+
+## Languages and music
+
+English, Simplified Chinese, Traditional Chinese and Japanese are available in the header. The first visit follows the browser language, and an explicit choice is saved under `studio-language` in localStorage. Translation strings and project descriptions live in `src/i18n/messages.ts`. Project names and printed cover branding retain their original names; imported articles retain the original text, with a language label in the reader.
+
+The Music section links to the user-provided Young CRT Spotify artist page. `public/studio-art/young-crt-header.png` is the header artwork supplied by the user. Update the artist URL/name in `src/content/profile.ts`. No Spotify SDK, embedded player, account login, or autoplay is required.

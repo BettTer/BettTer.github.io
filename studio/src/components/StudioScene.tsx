@@ -1,7 +1,8 @@
 export function StudioScene(){return <div className="studio-scene" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 <defs>
- <linearGradient id="sky" x2="0" y2="1"><stop stopColor="#8198b5"/><stop offset=".48" stopColor="#edb59c"/><stop offset="1" stopColor="#f7cc94"/></linearGradient>
- <linearGradient id="sea" x2="0" y2="1"><stop stopColor="#528b99"/><stop offset="1" stopColor="#24566f"/></linearGradient>
+ <linearGradient id="sky" x2="0" y2="1"><stop stopColor="#7766b3"/><stop offset=".34" stopColor="#bf80c1"/><stop offset=".67" stopColor="#f19bbd"/><stop offset="1" stopColor="#ffc7b4"/></linearGradient>
+ <radialGradient id="sun-haze"><stop stopColor="#ffe8be" stopOpacity=".62"/><stop offset=".55" stopColor="#ffb1c7" stopOpacity=".2"/><stop offset="1" stopColor="#ffb1c7" stopOpacity="0"/></radialGradient>
+ <linearGradient id="sea" x2="0" y2="1"><stop stopColor="#8c80b3"/><stop offset=".38" stopColor="#66688e"/><stop offset="1" stopColor="#354f70"/></linearGradient>
  <linearGradient id="room" x2="1" y2="1"><stop stopColor="#f2eddb"/><stop offset="1" stopColor="#d5ceba"/></linearGradient>
  <linearGradient id="wood" x2="0" y2="1"><stop stopColor="#bf7957"/><stop offset="1" stopColor="#8f4e3e"/></linearGradient>
  <clipPath id="window"><rect x="434" y="74" width="1076" height="565" rx="2"/></clipPath>
@@ -13,13 +14,15 @@ export function StudioScene(){return <div className="studio-scene" aria-hidden="
 <rect x="425" y="65" width="1094" height="583" fill="#f6eed9"/>
 <g clipPath="url(#window)">
  <rect x="434" y="74" width="1076" height="565" fill="url(#sky)"/>
- <circle cx="1177" cy="346" r="77" fill="#ffe1a1"/>
+ <circle cx="1177" cy="346" r="211" fill="url(#sun-haze)"/>
+ <g fill="#eec1e0" opacity=".38"><path d="M520 183q57-14 117-3l149 8-208 0Z"/><path d="M1090 155q74-13 136 1l168 8-242 1Z"/><path d="M810 255q56-9 92-1l124 6-172 1Z"/></g>
+ <circle cx="1177" cy="346" r="77" fill="#fff0c9"/>
  <path d="M434 411H1510V639H434Z" fill="url(#sea)"/>
- <path d="M434 411H1510" stroke="#f6d2a2" strokeWidth="3"/>
- <g fill="#f4c79b" opacity=".6"><path d="M1126 429h104l-18 3h-102zM1114 445h140l-31 3h-125zM1088 467h186l-21 3h-184zM1099 493h156l40 3h-233zM1052 522h256l-36 3h-195zM1034 563h271l30 3h-321zM1017 602h344l-39 3h-335z"/></g>
- <g fill="#586f7b"><path d="M444 414v-37h19v-44h28v15h17v-57h28v32h27v-67h23v-12h11v12h23v77h23v-26h35v60h19v-88h34v17h22v-48h29v101h19v-71h29v31h31v76h28v-47h20v-28h20v45h22v-67h32v12h22v83h26v-54h21v54h20v-80h36v94H444Z"/>
+ <path d="M434 411H1510" stroke="#f5bbcf" strokeWidth="3"/>
+ <g fill="#f5bbcf" opacity=".72"><path d="M1126 429h104l-18 3h-102zM1114 445h140l-31 3h-125zM1088 467h186l-21 3h-184zM1099 493h156l40 3h-233zM1052 522h256l-36 3h-195zM1034 563h271l30 3h-321zM1017 602h344l-39 3h-335z"/></g>
+ <g fill="#5b577b"><path d="M444 414v-37h19v-44h28v15h17v-57h28v32h27v-67h23v-12h11v12h23v77h23v-26h35v60h19v-88h34v17h22v-48h29v101h19v-71h29v31h31v76h28v-47h20v-28h20v45h22v-67h32v12h22v83h26v-54h21v54h20v-80h36v94H444Z"/>
  <path d="M1337 414v-34h23v-47h16v47h23v-87h36v-31h6v31h17v79h24v-59h28v101Z"/></g>
- <g fill="#e8b590" opacity=".65"><path d="M579 276h5v5h-5zm0 15h5v5h-5zm16 30h5v5h-5zm111-8h5v5h-5zm0 15h5v5h-5zm16 0h5v5h-5zm81 8h5v5h-5zm16 15h5v5h-5zm585-27h5v5h-5zm0 17h5v5h-5z"/></g>
+ <g fill="#eab7cf" opacity=".65"><path d="M579 276h5v5h-5zm0 15h5v5h-5zm16 30h5v5h-5zm111-8h5v5h-5zm0 15h5v5h-5zm16 0h5v5h-5zm81 8h5v5h-5zm16 15h5v5h-5zm585-27h5v5h-5zm0 17h5v5h-5z"/></g>
  <path d="M445 639q35-186 4-409l12-3q44 220 11 412Z" fill="#263f47"/>
  <g fill="#263f47"><path d="M456 236q-80-79-180-25 119-23 180 25M456 236q-5-139-103-147 77 50 103 147M456 236q53-115 143-87-87 13-143 87M456 236q102-54 162 12-94-36-162-12M456 236q-82-27-128 74 62-70 128-74M456 236q68 7 91 99-45-61-91-99"/></g>
  <path d="M1429 639q-3-199 28-359l8 3q-22 163-16 356Z" fill="#334c52"/>

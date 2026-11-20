@@ -10,6 +10,7 @@ const en={
  musicEyebrow:'ALSO FROM THIS ROOM / MUSIC',musicFirst:'After hours.',musicSecond:'Another frequency.',musicDescription:'Music lives here, too.\nMeet Young CRT, the other side of the collection.',listenSpotify:'Listen on Spotify',artistSpotify:'ARTIST ON SPOTIFY',posterAlt:'Young CRT — Lofi / Synthwave: a pink sunset, purple sky, astronaut and retro car.',
  notesEyebrow:'02 / PAPERS ON THE TABLE',notesFirst:'A few words,',notesSecond:'kept on paper.',notesDescription:'Ideas, observations, loose ends.\nThe occasional dispatch from this room.',read:'Read',paperBrand:'杂谈',notesCategory:'NOTES & OBSERVATIONS',unfold:'UNFOLD & READ',keepingFirst:'Some things',keepingSecond:'are worth keeping.',notebook:'An open notebook.\nOne page at a time.',closeNote:'Close note',close:'CLOSE',originalArchive:'Original archive',originalLanguage:'Original text · Chinese',readerFooter:'Filed in the studio. Kept for another day.',
  aboutEyebrow:"03 / HOW I WORK",aboutFirst:"Know what you ship.",aboutSecond:"Read every line.",aboutIntro:"I write the spec and design, work with coding agents, and review every line before it merges.",aboutBody:"Nothing ships that I can’t explain. Outside of code: Yu-Gi-Oh!, the NBA and the gym.",findGithub:'Find me on GitHub',listenArtist:'Listen to Young CRT on Spotify',browseArchive:'Browse the original journal archive',littleRoom:'A LITTLE ROOM ON THE INTERNET.',backWindow:'BACK TO THE WINDOW',
+ installUserscript:'Install userscript',
  projectDescriptions:[
  "An AI knowledge workspace. I build the mobile app and contribute to the agent side: the MCP server, retrieval and evaluations that keep answers honest.",
  "A planning app built around interactive widgets. I wrote the sync engine that keeps the app and widgets consistent under concurrent writes.",
@@ -17,8 +18,9 @@ const en={
  'Card search, deck checks, opening-hand odds and a rules-engine route planner. Tools that give an AI assistant exact data instead of asking it to remember.',
  'An iOS vocal keyboard with Live2D characters, beat-driven visuals, editable lyrics and adaptive tempo. Your touch becomes a small performance.',
  'A streaming audio engine built directly on Core Audio. Parsing, packet buffering and AudioQueue output, without a third-party audio library in the engine. Code-driven playback; not a finished player UI.',
- 'An AR prototype that pins a note to a real surface and restores it later. World-map relocalization, GPS/heading fallback and surface snapping make a digital note feel attached to a place.'
- ],projectKinds:["SHIPPED / MOBILE & AI","SHIPPED / WIDGETS & SYNC","SHIPPED / ON-DEVICE ML",'TOOLS / GAME SYSTEMS','MUSIC / INTERACTION','AUDIO / ENGINEERING','SPATIAL / PROTOTYPE']
+ 'An AR prototype that pins a note to a real surface and restores it later. World-map relocalization, GPS/heading fallback and surface snapping make a digital note feel attached to a place.',
+ 'A Tampermonkey script that puts Google results in two columns so you can compare more titles and snippets on one screen. Result numbers carry across pages, and the layout adapts to Google’s sidebar, dark mode, and Lens results.'
+ ],projectKinds:["SHIPPED / MOBILE & AI","SHIPPED / WIDGETS & SYNC","SHIPPED / ON-DEVICE ML",'TOOLS / GAME SYSTEMS','MUSIC / INTERACTION','AUDIO / ENGINEERING','SPATIAL / PROTOTYPE','TOOLS / BROWSER']
 };
 export type Messages=typeof en;
 const zhHans:Messages={
@@ -32,6 +34,7 @@ const zhHans:Messages={
  musicEyebrow:'同样来自这间工作室 / 音乐',musicFirst:'工作之外，',musicSecond:'另一个频率。',musicDescription:'这里也有音乐。\nYoung CRT，是收藏的另一面。',listenSpotify:'去 Spotify 听听',artistSpotify:'SPOTIFY 歌手页',posterAlt:'Young CRT — Lofi / Synthwave：粉色落日、紫色天空、宇航员与复古汽车。',
  notesEyebrow:'02 / 桌上的报纸',notesFirst:'几句话，',notesSecond:'留在纸上。',notesDescription:'想法、观察、未完的思绪。\n偶尔从这间房里寄出的一页。',read:'阅读',paperBrand:'杂谈',notesCategory:'随笔 · 想法与观察',unfold:'展开阅读',keepingFirst:'有些事物，',keepingSecond:'值得留下。',notebook:'一本摊开的笔记。\n一页，一页地写。',closeNote:'关闭文章',close:'关闭',originalArchive:'原始归档',originalLanguage:'原文 · 中文',readerFooter:'收进工作室，留待另一天。',
  aboutEyebrow:"03 / 我的工作方式",aboutFirst:"理解每次交付，",aboutSecond:"读过每一行。",aboutIntro:"我写需求和设计，让 Coding Agent 承担大部分代码输入，并在合并前逐行审阅。",aboutBody:"无法解释清楚的东西，就不发布。写代码之外，喜欢游戏王、NBA 和健身。",findGithub:'在 GitHub 找到我',listenArtist:'在 Spotify 聆听 Young CRT',browseArchive:'浏览原来的杂谈归档',littleRoom:'互联网上的一间小房间。',backWindow:'回到窗边',
+ installUserscript:'安装脚本',
  projectDescriptions:[
  "一个 AI 知识工作空间。我负责移动端，也参与 Agent 侧的 MCP Server、检索，以及检查回答质量的评估工作。",
  "围绕交互式小组件打造的规划应用。我编写了同步引擎，让 App 与小组件在并发写入时仍然保持一致。",
@@ -39,8 +42,9 @@ const zhHans:Messages={
  '查卡、卡组检查、起手概率计算，以及基于真实规则引擎的展开路线规划。让 AI 助手使用准确的数据，而不是凭记忆回答。',
  '一个 iOS 人声键盘：Live2D 角色、节拍驱动的画面、可编辑歌词和自适应速度。让每一次触碰成为一段小小的演出。',
  '直接基于 Core Audio 的流式音频引擎，自行处理解析、数据包缓冲和 AudioQueue 输出，引擎不依赖第三方音频库。目前通过代码控制播放，尚无完整播放器界面。',
- '一个把便签贴在真实表面、并在之后恢复的 AR 原型。通过世界地图重定位、GPS 与朝向回退，以及表面吸附，让数字便签留在原处。'
- ],projectKinds:["已上线 / 移动端与 AI","已上线 / 小组件与同步","已上线 / 端侧机器学习",'工具 / 游戏系统','音乐 / 交互','音频 / 工程','空间 / 原型']
+ '一个把便签贴在真实表面、并在之后恢复的 AR 原型。通过世界地图重定位、GPS 与朝向回退，以及表面吸附，让数字便签留在原处。',
+ '一个把 Google 搜索结果排成两列的 Tampermonkey 脚本，一屏能看到更多标题和摘要。结果编号跨页接续，排版适配 Google 侧栏、夜间模式和 Lens 搜索结果。'
+ ],projectKinds:["已上线 / 移动端与 AI","已上线 / 小组件与同步","已上线 / 端侧机器学习",'工具 / 游戏系统','音乐 / 交互','音频 / 工程','空间 / 原型','工具 / 浏览器']
 };
 const zhHant:Messages={
  sceneLabel:'天色',sceneTimeLabel:'選擇場景時段',sceneAuto:'當地時間',sceneMorning:'清晨',sceneDay:'白天',sceneDusk:'黃昏',sceneNight:'夜晚',
@@ -53,6 +57,7 @@ const zhHant:Messages={
  musicEyebrow:'同樣來自這間工作室 / 音樂',musicFirst:'工作之外，',musicSecond:'另一個頻率。',musicDescription:'這裡也有音樂。\nYoung CRT，是收藏的另一面。',listenSpotify:'去 Spotify 聽聽',artistSpotify:'SPOTIFY 藝人頁',posterAlt:'Young CRT — Lofi / Synthwave：粉色落日、紫色天空、太空人與復古汽車。',
  notesEyebrow:'02 / 桌上的報紙',notesFirst:'幾句話，',notesSecond:'留在紙上。',notesDescription:'想法、觀察、未完的思緒。\n偶爾從這間房裡寄出的一頁。',read:'閱讀',paperBrand:'雜談',notesCategory:'隨筆 · 想法與觀察',unfold:'展開閱讀',keepingFirst:'有些事物，',keepingSecond:'值得留下。',notebook:'一本攤開的筆記。\n一頁，一頁地寫。',closeNote:'關閉文章',close:'關閉',originalArchive:'原始封存',originalLanguage:'原文 · 中文',readerFooter:'收進工作室，留待另一天。',
  aboutEyebrow:"03 / 我的工作方式",aboutFirst:"理解每次交付，",aboutSecond:"讀過每一行。",aboutIntro:"我寫需求和設計，讓 Coding Agent 承擔大部分程式碼輸入，並在合併前逐行審閱。",aboutBody:"無法解釋清楚的東西，就不發布。寫程式之外，喜歡遊戲王、NBA 和健身。",findGithub:'在 GitHub 找到我',listenArtist:'在 Spotify 聆聽 Young CRT',browseArchive:'瀏覽原來的雜談封存',littleRoom:'網路上的一間小房間。',backWindow:'回到窗邊',
+ installUserscript:'安裝腳本',
  projectDescriptions:[
  "一個 AI 知識工作空間。我負責行動端，也參與 Agent 側的 MCP Server、檢索，以及檢查回答品質的評估工作。",
  "圍繞互動式小工具打造的規劃應用。我編寫了同步引擎，讓 App 與小工具在並行寫入時仍然保持一致。",
@@ -60,8 +65,9 @@ const zhHant:Messages={
  '卡片查詢、牌組檢查、起手機率計算，以及基於真實規則引擎的展開路線規劃。讓 AI 助手使用準確的資料，而不是憑記憶回答。',
  '一個 iOS 人聲鍵盤：Live2D 角色、節拍驅動的畫面、可編輯歌詞和自適應速度。讓每一次觸碰成為一段小小的演出。',
  '直接基於 Core Audio 的串流音訊引擎，自行處理解析、資料封包緩衝和 AudioQueue 輸出，引擎不依賴第三方音訊函式庫。目前透過程式碼控制播放，尚無完整播放器介面。',
- '一個把便條貼在真實表面、並在之後恢復的 AR 原型。透過世界地圖重新定位、GPS 與朝向備援，以及表面吸附，讓數位便條留在原處。'
- ],projectKinds:["已上線 / 行動端與 AI","已上線 / 小工具與同步","已上線 / 端側機器學習",'工具 / 遊戲系統','音樂 / 互動','音訊 / 工程','空間 / 原型']
+ '一個把便條貼在真實表面、並在之後恢復的 AR 原型。透過世界地圖重新定位、GPS 與朝向備援，以及表面吸附，讓數位便條留在原處。',
+ '一個將 Google 搜尋結果排成兩欄的 Tampermonkey 腳本，在同一個畫面就能比較更多標題和摘要。結果編號跨頁接續，版面也會配合 Google 側邊欄、深色模式和 Lens 搜尋結果調整。'
+ ],projectKinds:["已上線 / 行動端與 AI","已上線 / 小工具與同步","已上線 / 端側機器學習",'工具 / 遊戲系統','音樂 / 互動','音訊 / 工程','空間 / 原型','工具 / 瀏覽器']
 };
 const ja:Messages={
  sceneLabel:'空の色',sceneTimeLabel:'時間帯を選ぶ',sceneAuto:'現地時刻',sceneMorning:'朝',sceneDay:'昼',sceneDusk:'夕暮れ',sceneNight:'夜',
@@ -74,6 +80,7 @@ const ja:Messages={
  musicEyebrow:'この部屋から、もうひとつ / 音楽',musicFirst:'日が暮れたら、',musicSecond:'別の周波数へ。',musicDescription:'この部屋には、音楽もあります。\nYoung CRT。コレクションの、もうひとつの顔。',listenSpotify:'Spotify で聴く',artistSpotify:'SPOTIFY アーティストページ',posterAlt:'Young CRT — Lofi / Synthwave：ピンクの夕焼け、紫の空、宇宙飛行士とレトロな車。',
  notesEyebrow:'02 / テーブルの上の新聞',notesFirst:'いくつかの言葉を、',notesSecond:'紙に残して。',notesDescription:'思いつき、観察、まだ途中の考え。\nこの部屋から、ときどき届く一ページ。',read:'読む',paperBrand:'雑談',notesCategory:'随筆 · 考えと観察',unfold:'広げて読む',keepingFirst:'残しておきたい',keepingSecond:'ものがある。',notebook:'開いたノート。\n一ページずつ。',closeNote:'記事を閉じる',close:'閉じる',originalArchive:'元の記事',originalLanguage:'原文 · 中国語',readerFooter:'アトリエにしまって、またいつか。',
  aboutEyebrow:"03 / 仕事の進め方",aboutFirst:"届けるものを理解し、",aboutSecond:"一行ずつ読む。",aboutIntro:"仕様と設計を書き、コーディングエージェントと実装し、マージ前にすべてのコードを読みます。",aboutBody:"説明できないものはリリースしません。コード以外では、遊戯王、NBA、ジムが好きです。",findGithub:'GitHub でつながる',listenArtist:'Spotify で Young CRT を聴く',browseArchive:'以前の雑談アーカイブを見る',littleRoom:'インターネットの片隅の、小さな部屋。',backWindow:'窓辺に戻る',
+ installUserscript:'スクリプトをインストール',
  projectDescriptions:[
  "AI ナレッジワークスペース。モバイル開発を担当し、MCP サーバー、検索、回答品質の評価など、エージェント側にも取り組んでいます。",
  "インタラクティブウィジェットを中心としたプランニングアプリ。同時書き込みでもアプリとウィジェットの整合性を保つ同期エンジンを実装しました。",
@@ -81,7 +88,8 @@ const ja:Messages={
  'カード検索、デッキ検証、初手の確率計算、そして実際のルールエンジンによる展開ルート探索。AI アシスタントが記憶に頼らず、正確なデータを使えるようにするツールです。',
  'Live2D キャラクター、ビートに合わせた映像、編集できる歌詞、テンポへの適応を備えた iOS のボーカルキーボード。タッチが小さな演奏になります。',
  'Core Audio を直接使ったストリーミング音声エンジン。解析、パケットバッファー、AudioQueue 出力を実装し、エンジン内に外部の音声ライブラリーを使いません。現在はコードから再生を操作し、完成したプレーヤー画面はありません。',
- '現実の表面にメモを置き、後で同じ場所に復元する AR プロトタイプ。ワールドマップによる再ローカライズ、GPS と方位による補完、表面への吸着を組み合わせています。'
- ],projectKinds:["製品 / モバイルと AI","製品 / ウィジェットと同期","製品 / オンデバイス ML",'ツール / ゲームシステム','音楽 / インタラクション','音声 / エンジニアリング','空間 / プロトタイプ']
+ '現実の表面にメモを置き、後で同じ場所に復元する AR プロトタイプ。ワールドマップによる再ローカライズ、GPS と方位による補完、表面への吸着を組み合わせています。',
+ 'Google の検索結果を2列に並べ、1画面でより多くのタイトルや概要を見比べられる Tampermonkey スクリプトです。結果の番号は次のページに引き継がれ、サイドバーやダークモード、Google Lens の表示にも対応します。'
+ ],projectKinds:["製品 / モバイルと AI","製品 / ウィジェットと同期","製品 / オンデバイス ML",'ツール / ゲームシステム','音楽 / インタラクション','音声 / エンジニアリング','空間 / プロトタイプ','ツール / ブラウザー']
 };
 export const messages:Record<Locale,Messages>={en,'zh-Hans':zhHans,'zh-Hant':zhHant,ja};

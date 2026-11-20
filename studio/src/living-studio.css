@@ -41,6 +41,7 @@
 .collection-groups button span{font-family:ui-monospace,monospace;font-size:9px;opacity:.7}
 .collection-groups button[aria-pressed=true]{background:#34494a;color:#fff0d9;border-color:#34494a}
 .product-shelf{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+@media(min-width:1100px){.record-shelf:not(.product-shelf){grid-template-columns:repeat(5,minmax(0,1fr))}}
 .product-shelf .cover-symbol{font-size:clamp(75px,9vw,150px)}
 .cover-ancher .cover-lines{border-radius:35%;transform:rotate(-25deg);bottom:-20%;right:-15%}
 .cover-planflow .cover-lines{border-radius:0;transform:rotate(-20deg);bottom:-18%;right:-25%}
